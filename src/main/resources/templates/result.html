@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+</head>
+<body>
+<h1>Student Added</h1>
+<p>Student ID: <span th:text="${student.studentId}"></span></p>
+<p>First Name: <span th:text="${student.studentFirstName}"></span></p>
+<p>Last Name: <span th:text="${student.studentLastName}"></span></p>
+<a th:href="@{/students}">Back</a>
+</body>
+</html>
