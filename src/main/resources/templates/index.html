@@ -1,0 +1,17 @@
+<!-- src/main/resources/templates/index.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to the Participation App</h1>
+    <p>
+        <a th:href="@{/students}">Go to Students List</a>
+    </p>
+</div>
+</body>
+</html>
