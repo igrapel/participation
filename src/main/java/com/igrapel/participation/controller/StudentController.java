@@ -17,6 +17,11 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    @GetMapping("/")
+    public String getIndexPage() {
+        return "index";
+    }
+
     @GetMapping("/students")
     public String getStudentsPage() {
         return "students";
