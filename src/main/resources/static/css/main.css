@@ -27,6 +27,36 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid #4CAF50; /* Border around the entire table */
+    border-radius: 8px;
+    overflow: hidden; /* Ensure the border radius applies to the whole table */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Borders around each cell */
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
 /* Link styles */
 a {
     color: #3498db;
@@ -36,4 +66,9 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Additional styles for the add students link */
+.add-students {
+    margin-top: 20px;
 }

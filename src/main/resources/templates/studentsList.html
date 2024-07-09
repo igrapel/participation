@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Students List</title>
     <link rel="stylesheet" th:href="@{/css/main.css}" />
 </head>
 <body>
-<h1>Students List</h1>
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Participation</th>
-    </tr>
-    </thead>
-    <tbody>
-    <!-- Iterate over the list of students passed from the controller -->
-    <tr th:each="student : ${students}">
-        <td th:text="${student.studentId}"></td>
-        <td th:text="${student.studentFirstName}"></td>
-        <td th:text="${student.studentLastName}"></td>
-        <td th:text="${student.participation}"></td>
-    </tr>
-    </tbody>
-</table>
+<div class="container">
+    <h1>Students List</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Participation</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Iterate over the list of students passed from the controller -->
+        <tr th:each="student : ${students}">
+            <td th:text="${student.studentId}"></td>
+            <td th:text="${student.studentFirstName}"></td>
+            <td th:text="${student.studentLastName}"></td>
+            <td th:text="${student.participation}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="add-students">
+        <a th:href="@{/students}">Add Students</a>
+    </div>
+</div>
 </body>
 </html>
