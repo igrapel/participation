@@ -1,15 +1,18 @@
-<!-- src/main/resources/templates/index.html -->
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>Welcome</title>
-  <link rel="stylesheet" th:href="@{/css/main.css}" />
+  <link rel="stylesheet" th:href="@{/css/styles.css}" />
 </head>
 <body>
-<h1>Welcome to the Participation App</h1>
-<p>
-  <a th:href="@{/students}">Go to Students List</a>
-</p>
+<h1 style="white-space: pre-line">Welcome to the Participation App </h1>
+
+
+<th:block>
+  <p class="list-link" style="white-space: pre-line">
+    <a th:href="@{/students}">Add Students</a>
+  </p>
+</th:block>
 </body>
 </html>

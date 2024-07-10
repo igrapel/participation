@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     <title>Students</title>
+    <link rel="stylesheet" th:href="@{/css/studentsStyles.css}" />
 </head>
 <body>
 <h1>Add Student</h1>
-<form action="#" th:action="@{/addStudent}" th:method="post">
+<form action="#" th:action="@{/addStudent}" th:method="post" class="student-form">
     <label for="firstName">First Name:</label>
     <input type="text" id="firstName" name="firstName" required>
     <label for="lastName">Last Name:</label>
@@ -14,7 +16,7 @@
 </form>
 
 <h1>Add Student with ID</h1>
-<form action="#" th:action="@{/addStudentWithId}" th:method="post">
+<form action="#" th:action="@{/addStudentWithId}" th:method="post" class="student-form">
     <label for="id">ID:</label>
     <input type="number" id="id" name="id" required>
     <label for="firstName">First Name:</label>
