@@ -22,12 +22,12 @@ public class StudentController {
         return "index";
     }
 
-    @GetMapping("/students")
+    @GetMapping("/add_students")
     public String getStudentsPage() {
-        return "students";
+        return "add_students";
     }
 
-    @GetMapping("/students/list")
+    @GetMapping("/students_list")
     public String getStudents(Model model) {
         List<Students> students = studentService.getAllStudents();
         model.addAttribute("students", students);
