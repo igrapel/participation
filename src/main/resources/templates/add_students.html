@@ -6,6 +6,15 @@
     <link rel="stylesheet" th:href="@{/css/studentsStyles.css}" />
 </head>
 <body>
+
+<br/>
+<br/>
+<br/>
+<div class="header">
+    <a th:href="@{/students_list}">Go to Students List</a>
+</div>
+
+<div class="flex-container">
 <h1>Add Student</h1>
 <form action="#" th:action="@{/addStudent}" th:method="post" class="student-form">
     <label for="firstName">First Name:</label>
@@ -25,5 +34,6 @@
     <input type="text" id="lastName" name="lastName" required>
     <button type="submit">Add Student</button>
 </form>
+</div>
 </body>
 </html>
