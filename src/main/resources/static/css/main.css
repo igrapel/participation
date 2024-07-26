@@ -78,3 +78,37 @@ a:hover {
     /* Removed display: block property */
     margin-top: 20px;  /* Adds some space above the link */
 }
+
+/* Button styles */
+button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Plus and minus button styles */
+button.plus {
+    background-color: #4CAF50; /* Green for plus button */
+}
+
+button.plus:hover {
+    background-color: #45a049;
+}
+
+button.minus {
+    background-color: #f44336; /* Red for minus button */
+}
+
+button.minus:hover {
+    background-color: #e53935;
+}

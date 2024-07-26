@@ -1,11 +1,13 @@
 package com.igrapel.participation.controller;
 
+import com.igrapel.participation.repository.StudentRepository;
 import com.igrapel.participation.model.Students;
 import com.igrapel.participation.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -16,6 +18,9 @@ public class StudentController {
 
     @Autowired
     private StudentService studentService;
+
+    @Autowired
+    private StudentRepository studentRepository;
 
     @GetMapping("/")
     public String getIndexPage() {
@@ -46,5 +51,21 @@ public class StudentController {
         Students student = studentService.addStudent(id, firstName, lastName);
         model.addAttribute("student", student);
         return "result";
+    }
+
+    @GetMapping("/increase/{id}")
+    public String increaseParticipation(@PathVariable("id") int id) {
+        Students student = studentRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
+        student.setParticipation(student.getParticipation() + 1);
+        studentRepository.save(student);
+        return "studentsList";
+    }
+
+    @GetMapping("/decrease/{id}")
+    public String decreaseParticipation(@PathVariable("id") int id) {
+        Students student = studentRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
+        student.setParticipation(student.getParticipation() - 1);
+        studentRepository.save(student);
+        return "studentsList";
     }
 }
